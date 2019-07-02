@@ -34,55 +34,6 @@ function readTextFile() {
 	}
 	rawFile.send();
 }
-/*
-function formatText()
-{
-	document.querySelector("#written").innerHTML = words.slice(0,current_iterator).join(" ");
-	document.querySelector("#current").innerHTML = '<span id="correct-char"></span><span id="incorrect-char">'+words[current_iterator]+'</span>';
-	document.querySelector("#rest").innerHTML = words.slice(current_iterator+1).join(" ");
-}
-
-function formatCurrent()
-{
-	var correct = 0, incorrect;
-	var i = 0;
-	while(scanner.value[i] == words[current_iterator][i] && i <Math.min(scanner.value.length, words[current_iterator].length))
-	{
-		i++;
-		correct++;
-	}
-	document.querySelector("#correct-char").innerHTML = words[current_iterator].substr(0,correct);
-	while ( i < Math.min(scanner.value.length,words[current_iterator].length))
-	{
-		incorrect++;
-		i++;
-	}
-	document.querySelector("#incorrect-char").innerHTML = words[current_iterator].substring(correct,incorrect)
-	document.querySelector("#rest-char").innerHTML = words[current_iterator].substring(correct+incorrect);
-}
-function keyPush(e)
-{
-	if ( e.keyCode == 32)
-	{
-		setTimeout(function(){ scanner.value = scanner.value.substr(0,scanner.value.length - 1 ); }, 1);
-
-		if ( scanner.value == words[current_iterator])
-		{
-			current_iterator++;
-			formatText();
-			setTimeout(function(){ scanner.value = '';},1);
-			dom_showcas.innerHTML = words[current_iterator];			
-		}
-	}
-	else if ( (e.keyCode >= 65 && e.keyCode <= 90 ) || e.keyCode == 8 || (e.keyCode >= 96 && e.keyCode <= 105 ) || ( e.keyCode >= 48 && e.keyCode <= 57))
-	{
-		setTimeout(function{ formatCurrent();},1);
-	}
-	else
-	{
-		console.log(e.keyCode);
-	}
-}*/
 
 function backspace(e)
 {
